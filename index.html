@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BASE ACCOUNTANCY LIMITED</title>
+<meta name="description" content="AuroraThimble Games">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BASE ACCOUNTANCY LIMITED">
+<meta property="og:title" content="BASE ACCOUNTANCY LIMITED">
+<meta property="og:description" content="AuroraThimble Games">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/fonts/fraunces.css">
+<link rel="stylesheet" href="/fonts/dmsans.css">
+<style>
+:root {
+  --bg: hsl(145 30% 97%);
+  --paper: #fff;
+  --ink: hsl(145 22% 11%);
+  --muted: hsl(145 10% 38%);
+  --line: hsl(145 18% 88%);
+  --accent: hsl(325 70% 40%);
+  --serif: Fraunces, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--sans); }
+.wrap { max-width: 64rem; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 2.5rem); }
+.top { border-bottom: 1px solid var(--line); background: var(--paper); }
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1rem; padding-bottom: 1rem; flex-wrap: wrap; }
+.brand { font: 600 1.35rem/1 var(--serif); text-decoration: none; letter-spacing: -.01em; }
+.top nav { display: flex; gap: 1.4rem; font-size: .95rem; }
+.top nav a { text-decoration: none; color: var(--muted); }
+.top nav a:hover { color: var(--accent); }
+.hero { padding: clamp(3rem, 9vw, 6.5rem) 0 clamp(2rem, 5vw, 3.5rem); display: grid; gap: 1.5rem; }
+.hero h1 { margin: 0; font: 500 clamp(2.4rem, 7.2vw, 4.6rem)/1.04 var(--serif); letter-spacing: -.025em; max-width: 16ch; text-wrap: balance; }
+.hero h1 em { color: var(--accent); font-style: italic; }
+.lede { margin: 0; max-width: 46ch; color: var(--muted); font-size: 1.125rem; }
+h2.sec { font: 500 1.9rem/1.1 var(--serif); margin: 0 0 .5rem; letter-spacing: -.015em; }
+.game { display: grid; gap: 1.5rem; padding: 2.25rem 0; border-top: 1px solid var(--line); }
+.info .icon { width: 72px; height: 72px; border-radius: 16px; background: var(--paper); border: 1px solid var(--line); margin-bottom: 1rem; }
+.info h3 { margin: 0; font: 600 1.5rem/1.15 var(--serif); letter-spacing: -.01em; }
+.info p.short { margin: .45rem 0 0; color: var(--muted); max-width: 34ch; }
+.actions { display: flex; gap: .55rem; flex-wrap: wrap; margin: 1.1rem 0 0; }
+.btn { display: inline-flex; align-items: center; gap: .45rem; padding: .6rem 1.05rem; border-radius: 8px; font-size: .9rem; font-weight: 600; line-height: 1; text-decoration: none; border: 1px solid transparent; transition: background-color .12s, border-color .12s, color .12s; }
+.btn svg { width: 15px; height: 15px; }
+.btn-play { background: var(--accent); color: #fff; }
+.btn-play:hover { filter: brightness(1.12); }
+.btn-ghost { border-color: var(--line); background: var(--paper); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+.btn:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.shots { display: flex; gap: .7rem; overflow-x: auto; padding-bottom: .4rem; scroll-snap-type: x proximity; }
+.shots img { flex: 0 0 38%; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 8px 22px rgba(20, 20, 30, .08); scroll-snap-align: start; background: var(--paper); }
+.none { color: var(--muted); margin: 1rem 0 0; }
+.cols { display: grid; gap: 2rem; padding: 3rem 0; border-top: 1px solid var(--line); }
+.cols h2 { margin: 0; font: 500 1.9rem/1.1 var(--serif); letter-spacing: -.015em; }
+.cols p { margin: 0; color: var(--muted); max-width: 52ch; }
+.links { display: flex; flex-direction: column; gap: .7rem; align-items: flex-start; }
+.links a { display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; font-size: 1.05rem; }
+.links a svg { width: 18px; height: 18px; color: var(--accent); }
+.links a:hover span { text-decoration: underline; text-underline-offset: .2em; }
+footer { border-top: 1px solid var(--line); padding: 1.5rem 0 3rem; color: var(--muted); font-size: .85rem; }
+@media (min-width: 760px) {
+  .game { grid-template-columns: 17rem 1fr; gap: 3rem; }
+  .shots { display: grid; grid-template-columns: repeat(4, 1fr); overflow: visible; }
+  .shots img { flex: none; }
+  .cols { grid-template-columns: 17rem 1fr; gap: 3rem; }
+}
+
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="/">BASE ACCOUNTANCY LIMITED</a>
+  <nav><a href="#games">Games</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</div></header>
+<main class="wrap">
+  <section class="hero">
+    <h1>AuroraThimble Games</h1>
+    <p class="lede">We make compact puzzle adventures with playful objects and carefully designed levels. Each experience is easy to pick up and offers fresh challenges as players progress.</p>
+  </section>
+  <section id="games">
+    <h2 class="sec">Games</h2>
+      <article class="game">
+        <div class="info">
+          <img class="icon" src="/icons/top-three-tasks.png" alt="" width="72" height="72" loading="lazy">
+          <h3>Top Three Tasks</h3>
+          <p class="short">Pick the three tasks that matter for each day, plus a few simple habits.</p>
+          <p class="actions"><a class="btn btn-play" href="https://play.google.com/store/apps/details?id=io.topthree.calendar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.14-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14Z"/></svg>Google Play</a><a class="btn btn-ghost" href="/top-three-tasks/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 8.3-7 9.5-4.1-1.2-7-5.2-7-9.5V6l7-3Z"/><path d="M9.5 12.2l1.9 1.9 3.5-3.7"/></svg>Privacy policy</a></p>
+        </div>
+        <div class="shots"><img src="/shots/top-three-tasks_1.png" alt="Top Three Tasks screenshot 1" loading="lazy" decoding="async"><img src="/shots/top-three-tasks_2.png" alt="Top Three Tasks screenshot 2" loading="lazy" decoding="async"><img src="/shots/top-three-tasks_3.png" alt="Top Three Tasks screenshot 3" loading="lazy" decoding="async"><img src="/shots/top-three-tasks_4.png" alt="Top Three Tasks screenshot 4" loading="lazy" decoding="async"></div>
+      </article>
+      <article class="game">
+        <div class="info">
+          <img class="icon" src="/icons/walk-minutes.png" alt="" width="72" height="72" loading="lazy">
+          <h3>Walk Minutes</h3>
+          <p class="short">Pick a walking program and log your minutes, one simple day at a time.</p>
+          <p class="actions"><a class="btn btn-play" href="https://play.google.com/store/apps/details?id=me.walkminutes.checkin"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.14-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14Z"/></svg>Google Play</a><a class="btn btn-ghost" href="/walk-minutes/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 8.3-7 9.5-4.1-1.2-7-5.2-7-9.5V6l7-3Z"/><path d="M9.5 12.2l1.9 1.9 3.5-3.7"/></svg>Privacy policy</a></p>
+        </div>
+        <div class="shots"><img src="/shots/walk-minutes_1.png" alt="Walk Minutes screenshot 1" loading="lazy" decoding="async"><img src="/shots/walk-minutes_2.png" alt="Walk Minutes screenshot 2" loading="lazy" decoding="async"><img src="/shots/walk-minutes_3.png" alt="Walk Minutes screenshot 3" loading="lazy" decoding="async"><img src="/shots/walk-minutes_4.png" alt="Walk Minutes screenshot 4" loading="lazy" decoding="async"></div>
+      </article>
+  </section>
+  <section id="about" class="cols">
+    <h2>About</h2>
+    <p>Clear rules, short sessions and a design that stays out of the way. Questions and feedback are welcome by email.</p>
+  </section>
+  <section id="contact" class="cols">
+    <h2>Contact</h2>
+    <div class="links">
+          <a href="mailto:baseacc0untancylimited@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 8.2 5.6a1.4 1.4 0 0 0 1.6 0L21 7"/></svg><span>baseacc0untancylimited@gmail.com</span></a>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">&copy; 2026 BASE ACCOUNTANCY LIMITED &middot; baseaccountancylimited.cfd</div></footer>
+</body>
+</html>
